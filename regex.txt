@@ -1,0 +1,35 @@
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Sup SupSup
+
+MetaCharacters (Need to be escaped):
+Why? Because we use these for regex
+
+.[{()\^$|?*+
+
+cngo@gmail.com
+ted@cityu.edu
+link@yahoo.com
+legend-of-zelda@nintendo.net
+
+https://www.yahoo.com
+http://linkedin.com
+https://www.uscis.gov
+
+425-555-9999
+321.123.6147
+
+Mr. Clark
+Mr Jason
+
+Ted Mosby
+212-957-3536
+150 W. 85th Street
+Mahattan, New York
+
+Barney Stin
+888-879-1111
+East 84st Street and 3rd Avenue
+Manhattan, New York
+
