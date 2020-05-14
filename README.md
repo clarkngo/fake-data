@@ -1,7 +1,26 @@
 # fake-data
 
-http.log - bit.ly/httplog
+## Getting Started
+### Enable your Internet Connection in CentOS 7 using VirtualBox
+- Article: https://emcorrales.com/blog/how-to-enable-internet-access-on-centos7-virtualbox
+- Video: https://youtu.be/yQWZoIEAsKE?list=PLK4sJSsw4V-fnj92qQl9-11MNctGjQrkA
 
-To download:
+Quick Steps:
+1. In Terminal, edit your network interface configuration 
+```
+sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+```
+2. Change to `ONBOOT=yes`, don't forget to SAVE. In vim, `ESC` to enter command mode, `:wq` to save and exit.
+3. Restart network to apply changes
+```
+sudo systemctl restart network.service
+```
 
-curl -L -o http.log bit.ly/httplog
+
+## `http.log`
+- http.log - `bit.ly/httplog`
+- To download: `curl -L -o http.log bit.ly/httplog`
+
+## `sample.log`
+- sample.log - `bit.ly/samplelogfile`
+- To download: `curl -L -o sample.log bit.ly/samplelogfile`
