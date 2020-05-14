@@ -3,10 +3,10 @@
 ## Getting Started
 ### Enable your Internet Connection in CentOS 7 using VirtualBox
 - Article: https://emcorrales.com/blog/how-to-enable-internet-access-on-centos7-virtualbox
-- Video: https://youtu.be/yQWZoIEAsKE?list=PLK4sJSsw4V-fnj92qQl9-11MNctGjQrkA
+- Video: https://youtu.be/PlfxwKHY82M
 
 Quick Steps:
-1. In Terminal, edit your network interface configuration 
+1. In Terminal, edit your network interface configuration
 ```
 sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
 ```
