@@ -29,3 +29,6 @@ sudo systemctl restart network.service
 - star_wars.txt - `bit.ly/starwarstxt`
 - To download: `curl -L -o star_wars.txt bit.ly/starwarstxt`
 
+## `star_wars.txt`
+- star_wars.txt - `bit.ly/starwarstxt`
+- To download: `curl -L -o star_wars.txt bit.ly/starwarstxt`
