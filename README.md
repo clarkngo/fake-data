@@ -6,6 +6,16 @@
 - Video: https://youtu.be/PlfxwKHY82M
 
 Quick Steps:
+1. In your terminal, check your network scripts:
+```
+ls etc/sysconfig/network-scripts/`
+```
+2. Enable device:
+```
+ifup <devicename> && ifdown <devicename>
+```
+
+Steps:
 1. In Terminal, edit your network interface configuration
 ```
 sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3

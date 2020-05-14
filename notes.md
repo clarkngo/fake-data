@@ -6,10 +6,12 @@ WebApp: RegexOne - Learn Regular Expressions with simple, interactive exercises.
 
 ## Lesson 1: An Introduction, and the ABCs
 - abc
+-
 
 ## Lesson 1½: The 123s
 - \d
 - 123
+- [123][0-9][0-9]
 
 Explanation:
 
@@ -125,6 +127,9 @@ This lesson is more of a sandbox for you to play with some sample text. The lazy
 
 ## Problem 1: Matching a decimal numbers
 - ^-?\d+(,\d+)*(\.\d+(e\d+)?)?$
+- ^-?[0-9]+((,|\.)[0-9]+)*((e[0-9]+)?)?$
+- ^-?[0-9]+([,\.][0-9]+)*((e[0-9]+)?)?$
+- [^p]$
 
 Solution
 
@@ -137,7 +142,7 @@ This is not the only solution as there can be many expressions that can match th
 ## Problem 2: Matching phone numbers
 - ^\(?(\d+)(-|\)| )?(\d+)(-|\)| )?(\d+)(-|\)| )?(\d+)?
 - 1?[\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}
-
+- (1\s)?\(?([0-9]{3})(-|\)|\s)?([0-9]{3})(-|\s)?([0-9]{4}
 
 Solution
 
@@ -157,6 +162,7 @@ Again, you should probably use a framework to match emails!
 
 ## Problem 4: Matching HTML
 - <(a|div)\b[^>]*>(.*?)</(a|div)>
+- <(a|div)?>?
 
 Solution
 
@@ -176,7 +182,7 @@ Example:“^.$” will match all lines with any single character.
 
 ## Problem 5: Matching specific filenames
 - (\w+)\.(gif|jpg|png)$
-
+- ([a-z0-9_]+)\.(gif|png|jpg)$
 
 Solution
 
@@ -191,6 +197,7 @@ We can just skip all the starting and ending whitespace by not capturing it in a
 
 ## Problem 7: Extracting information from a log file
 - (\w+)\(([\w\.]+):(\d+)\)
+- (E/)\(\s[0-9]{4}\):(\s+[a-z]+.+)+([0-9]{3,4}\))
 
 Solution
 
@@ -229,3 +236,19 @@ grep '$HOME' filename
 
 
 # importance of the right type of quotation marks
+
+
+## Using regex.txt
+email
+- grep -E "[A-Za-z0-9+-]+@[a-z]+\.(com|edu|net)" regex.txt
+- grep -E "^(http|https)://(www)?\.[a-z]+\.(com|gov)" regex.txt
+url
+- grep -E "^(https?)://(www)?\.[a-z]+\.(com|gov)" regex.txt
+phone
+- grep -E "([0-9]{1,3})([\.-])([0-9]{1,3})([\.-])([0-9]{1,4})" regex.txt
+- grep -E "([0-9]{1,3})(\.|-)([0-9]{1,3})(\.|-)([0-9]{1,4})" regex.txt
+
+
+[] - Matches Characters in brackets
+[^] - Matches Characters in brackets
+() - Group
